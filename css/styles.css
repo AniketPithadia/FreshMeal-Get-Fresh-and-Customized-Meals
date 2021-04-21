@@ -495,7 +495,7 @@ section.subscribe {
   font-family: "Raleway-medium";
 }
 ::placeholder {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 .subscribe .subscribe-wrapper .newsletter .input-subscribe {
   background: var(--heaven);
@@ -503,8 +503,9 @@ section.subscribe {
   padding: 0.3rem;
 }
 .subscribe .subscribe-wrapper .newsletter .input-subscribe .btn {
-  padding: 0.75rem;
+  padding: 0.3rem;
   margin-right: 0rem;
+  font-size: 0.9rem;
   border-radius: 5px;
 }
 .subscribe .subscribe-wrapper .newsletter .input-subscribe .btn:hover {
