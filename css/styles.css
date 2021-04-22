@@ -59,6 +59,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 .nav-background {
@@ -71,7 +72,9 @@ body {
   padding: 0;
   z-index: 1;
 }
-
+.site-content {
+  overflow-x: hidden;
+}
 .site-content-wrapper.nav-trigger {
   position: absolute;
   top: -5px;
@@ -825,9 +828,7 @@ nav .nav-top {
   padding: 3rem 0;
 }
 
-
-
-@media (max-width: 1025px) {
+@media (max-width: 992px) {
   .container {
     max-width: 960px;
   }
@@ -835,11 +836,12 @@ nav .nav-top {
     display: none !important;
   }
 
-  header.header-blur {
-    margin-top: -4rem;
+  section.header-blur .container {
+    position: relative;
   }
-  header.header-blur .header-blur-image {
-    right: -160px;
+  section.header-blur .pop-image {
+    position: absolute;
+    right: -100px;
     top: 100px;
   }
 
@@ -852,16 +854,17 @@ nav .nav-top {
   }
 
   footer .instagram-api .post-wrap > div {
-    width: calc(1 / 2 * 100% - (1 - 1 / 3) * 10px);
+    width: calc((1 / 3) * 100% - (1 - 1 / 3) * 10px);
+    margin-right: 10px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 786px) {
   .container {
     max-width: 720px;
   }
-  .header-blur {
-    padding: 0;
+  section.header-blur .container {
+    margin-top: -18rem;
   }
   .food-slider .food-card button img {
     margin: -0.1rem 0rem -0.1rem -0.1rem;
@@ -872,7 +875,7 @@ nav .nav-top {
   .site-content .top-bar {
     display: none;
   }
-  .site-content nav .navbar {
+  .site-content nav {
     display: none;
   }
   .site-content-wrapper.nav-trigger {
@@ -923,10 +926,18 @@ nav .nav-top {
   .subscribe .subscribe-wrapper .newsletter {
     padding-right: 100px;
   }
-
-  .subscribe .subscribe-wrapper .newsletter .input-subscribe {
+  section.subscribe .container .subscribe-wrapper {
+    display: flex;
     flex-direction: column;
+    padding: 0.5rem;
   }
+  ::placeholder {
+    font-size: 1rem;
+  }
+  .subscribe .subscribe-wrapper .newsletter {
+    padding-right: 0;
+  }
+
   .subscribe .subscribe-wrapper .newsletter .input-subscribe input {
     padding-left: 0rem;
   }
@@ -938,33 +949,32 @@ nav .nav-top {
     margin-right: 0;
     margin-bottom: 3rem;
   }
-  footer .box:nth-child(3) h3 {
+  footer .box:nth-child(2) h3 {
     text-align: left;
   }
-  footer .box:nth-child(3) > div {
+  footer .box:nth-child(2) > div {
     display: block;
   }
-  .prev-btn {
-  left: -0.5rem;
-}
-.next-btn {
-  right: -0.5rem;
-}
+  footer .instagram-api .post-wrap > div {
+    width: calc((1 / 2) * 100% - (1 - 1 / 3) * 60px);
+  }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 576px) {
   .container {
-    max-width: 500px;
+    max-width: 480px;
   }
-  .header-blur .info .heading-logo {
-    right: -235px;
-    top: 150px;
+  section.header-blur {
+    position: relative;
   }
-  header.header-blur .container {
+  section.header-blur .pop-image {
+    position: absolute;
+    right: -215px;
+    top: 180px;
+  }
+  section.header-blur .container {
     padding-left: 1rem;
-  }
-  header.header-blur {
-    margin-top: -3rem;
+    margin-top: -18rem;
   }
   section.big-deal .timer > div {
     margin-right: 0.5rem;
@@ -986,22 +996,37 @@ nav .nav-top {
   .blog .news-wrapper article {
     margin-bottom: 1rem;
   }
-  section.subscribe .container .subscribe-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-  ::placeholder {
-    font-size: 0.8rem;
-  }
-  .subscribe .subscribe-wrapper .newsletter {
-    padding-right: 0;
-  }
 
   .subscribe .subscribe-wrapper .newsletter .input-subscribe {
     flex-direction: row;
   }
   section.contact-us {
     flex-direction: column;
+  }
+  section.contact-us .contact-info-wrapper {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 369px) {
+  .container {
+    max-width: 300px;
+  }
+  section.header-blur .container {
+    margin-top: -5rem;
+  }
+  section.header-blur {
+    position: relative;
+  }
+  section.header-blur .pop-image {
+    position: absolute;
+    right: -285px;
+    top: 250px;
+  }
+  ::placeholder {
+    font-size: 0.7rem;
+  }
+  .big-deal .timer div {
+    height: 80px;
+    width: 100px;
   }
 }
