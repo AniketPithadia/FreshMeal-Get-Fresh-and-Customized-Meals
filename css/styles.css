@@ -1038,6 +1038,10 @@ nav .nav-top {
   }
   .big-deal .timer div {
     height: 80px;
-    width: 100px;
+    width: 120px;
+    margin-right: 0.5rem;
+  }
+  .big-deal .timer {
+    margin-right: -0.5rem;
   }
 }
