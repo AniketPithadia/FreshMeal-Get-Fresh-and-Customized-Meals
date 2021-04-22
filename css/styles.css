@@ -72,7 +72,7 @@ body {
   z-index: 1;
 }
 
-.nav-trigger {
+.site-content-wrapper.nav-trigger {
   position: absolute;
   top: -5px;
   left: 0;
@@ -90,6 +90,7 @@ body {
   width: 40px;
   height: 40px;
   margin-bottom: 15px;
+  display: none;
 }
 .site-content-wrapper {
   width: 100%;
@@ -395,7 +396,7 @@ section.services {
   margin-bottom: 1rem;
   line-height: 1.3;
 }
-/* ----------------------DEAL TIMER-------------------- */
+/* ----------------------BIG-DEAL TIMER-------------------- */
 .big-deal {
   background: linear-gradient(rgba(35, 47, 53, 0.9), rgba(35, 47, 53, 0.9)),
     url(../images/food-table.jpg);
@@ -765,6 +766,9 @@ hr {
     max-width: 1152px;
   }
 }
+.site-content-wrapper.nav-trigger {
+  display: none;
+}
 .nav-background .mobile-logo {
   padding: 1rem;
 }
@@ -835,13 +839,6 @@ nav .nav-top {
   .top-products .slider-btn {
     display: none !important;
   }
-  .nav-trigger {
-    display: block;
-  }
-
-  .site-content .top-bar {
-    display: none;
-  }
 
   header.header-blur {
     margin-top: -4rem;
@@ -851,10 +848,10 @@ nav .nav-top {
     top: 100px;
   }
 
-  .latest-news .article-wrapper {
+  .latest-news .news-wrapper {
     flex-direction: column;
   }
-  .latest-news .article-wrapper .card {
+  .latest-news .news-wrapper .card {
     margin-right: 0;
     margin-bottom: 4rem;
   }
@@ -868,7 +865,32 @@ nav .nav-top {
   .container {
     max-width: 720px;
   }
-
+  .header-blur {
+    padding: 0;
+  }
+  .food-slider .food-card button img {
+    margin: -0.1rem 0rem -0.1rem -0.1rem;
+  }
+  .nav-trigger svg {
+    display: block;
+  }
+  .site-content .top-bar {
+    display: none;
+  }
+  .site-content nav .navbar {
+    display: none;
+  }
+  .site-content-wrapper.nav-trigger {
+    display: block;
+  }
+  .site-content nav .nav-top {
+    margin: 0;
+    padding: 0;
+  }
+  .site-content nav .nav-top .branding {
+    margin: 0 1rem;
+    margin-right: 1.5rem;
+  }
   .freshmeal .about-wrapper {
     flex-direction: column;
   }
@@ -882,20 +904,6 @@ nav .nav-top {
   }
   section.services .service-wrapper .serve-card {
     margin-bottom: 6rem;
-  }
-  footer .container {
-    flex-direction: column;
-  }
-  footer .box {
-    text-align: left;
-    margin-right: 0;
-    margin-bottom: 3rem;
-  }
-  footer .box:nth-child(3) h3 {
-    text-align: left;
-  }
-  footer .box:nth-child(3) > div {
-    display: block;
   }
   .blog .news-wrapper .news-card .post-details .post-meta {
     font-size: 0.8rem;
@@ -914,6 +922,7 @@ nav .nav-top {
     transform: scale(0.8);
   }
   ::placeholder {
+    text-align: center;
     font-size: 0.7rem;
   }
   .subscribe .subscribe-wrapper .newsletter {
@@ -923,13 +932,30 @@ nav .nav-top {
   .subscribe .subscribe-wrapper .newsletter .input-subscribe {
     flex-direction: column;
   }
+  .subscribe .subscribe-wrapper .newsletter .input-subscribe input {
+    padding-left: 0rem;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  footer .box {
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+  footer .box:nth-child(3) h3 {
+    text-align: left;
+  }
+  footer .box:nth-child(3) > div {
+    display: block;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 540px) {
   .container {
-    max-width: 540px;
+    max-width: 500px;
   }
-  header.header-blur .header-blur-image {
+  .header-blur .info .heading-logo {
     right: -235px;
     top: 150px;
   }
@@ -945,7 +971,20 @@ nav .nav-top {
   section.big-deal .timer {
     margin-right: -0.5rem;
   }
-
+  .big-deal .timer div {
+    height: 100px;
+    width: 100px;
+  }
+  .big-deal .timer div > .numbers {
+    font-size: 1.7rem;
+  }
+  .blog .news-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog .news-wrapper article {
+    margin-bottom: 1rem;
+  }
   section.subscribe .container .subscribe-wrapper {
     display: flex;
     flex-direction: column;
@@ -960,5 +999,8 @@ nav .nav-top {
 
   .subscribe .subscribe-wrapper .newsletter .input-subscribe {
     flex-direction: row;
+  }
+  section.contact-us {
+    flex-direction: column;
   }
 }
