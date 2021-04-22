@@ -869,6 +869,9 @@ nav .nav-top {
   .food-slider .food-card button img {
     margin: -0.1rem 0rem -0.1rem -0.1rem;
   }
+  .top-products .food-slider .food-card button span {
+    padding-left: 5rem;
+  }
   .nav-trigger svg {
     display: block;
   }
@@ -976,6 +979,9 @@ nav .nav-top {
     padding-left: 1rem;
     margin-top: -18rem;
   }
+  .top-products .food-slider .food-card button span {
+    padding-left: 2.8rem;
+  }
   section.big-deal .timer > div {
     margin-right: 0.5rem;
   }
@@ -1021,6 +1027,11 @@ nav .nav-top {
     position: absolute;
     right: -285px;
     top: 250px;
+  }
+  .top-products .food-slider .food-card button span {
+    font-family: "Raleway-medium";
+    font-size: 0.8rem;
+    padding-left: 1rem;
   }
   ::placeholder {
     font-size: 0.7rem;
