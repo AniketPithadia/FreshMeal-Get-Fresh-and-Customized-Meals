@@ -1013,9 +1013,9 @@ nav .nav-top {
     padding: 2rem 0;
   }
 }
-@media (max-width: 369px) {
+@media (max-width: 400px) {
   .container {
-    max-width: 300px;
+    max-width: 320px;
   }
   section.header-blur .container {
     margin-top: -5rem;
@@ -1026,7 +1026,7 @@ nav .nav-top {
   section.header-blur .pop-image {
     position: absolute;
     right: -285px;
-    top: 250px;
+    top: 280px;
   }
   .top-products .food-slider .food-card button span {
     font-family: "Raleway-medium";
